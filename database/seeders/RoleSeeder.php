@@ -17,25 +17,25 @@ class RoleSeeder extends Seeder
     public function run(): void
     {
         // Create Roles
-        $superAdminRole = Role::create(['name' => 'super-admin']);
-        $superAdminRole->givePermissionTo(Permission::all());
+        // $superAdminRole = Role::create(['name' => 'super-admin']);
+        // $superAdminRole->givePermissionTo(Permission::all());
 
-        $adminRole = Role::create(['name' => 'admin']);
-        $adminRole->givePermissionTo([
-            'product-list',
-            'product-create',
-            'product-edit',
-            'product-delete'
-        ]);
-        $staffRole = Role::create(['name' => 'staff']);
+        // $adminRole = Role::create(['name' => 'admin']);
+        // $adminRole->givePermissionTo([
+        //     'product-list',
+        //     'product-create',
+        //     'product-edit',
+        //     'product-delete'
+        // ]);
+        // $staffRole = Role::create(['name' => 'staff']);
 
-        $staffRole->givePermissionTo([
-            'product-list'
-        ]);
-        $userRole = Role::create(['name' => 'user']);
+        // $staffRole->givePermissionTo([
+        //     'product-list'
+        // ]);
+        // $userRole = Role::create(['name' => 'user']);
 
-        $userRole->givePermissionTo([
-            'product-list'
-        ]);
+        // $userRole->givePermissionTo([
+        //     'product-list'
+        // ]);
     }
 }
