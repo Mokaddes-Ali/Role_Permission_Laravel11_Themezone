@@ -15,7 +15,7 @@
 </div>
 
 @session('success')
-    <div class="alert alert-success" role="alert"> 
+    <div class="alert alert-success" role="alert">
         {{ $value }}
     </div>
 @endsession
@@ -34,11 +34,12 @@
         <td>{{ $user->name }}</td>
         <td>{{ $user->email }}</td>
         <td>
+            {{-- //not empty --}}
        @if (!empty($user->getRoleNames()))
        @foreach ($user->getRoleNames() as $role)
        {{ $role}}
        @endforeach
-       
+
        @endif
         </td>
         <td>
