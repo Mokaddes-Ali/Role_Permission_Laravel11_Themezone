@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
 
@@ -19,7 +20,11 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::group(['middleware' => ['auth']], function() {
-    //  Route::resource('roles', RoleController::class);
+     Route::resource('roles', RoleController::class);
+
+    Route::get('/role', [RoleController::class, 'create']);
+    Route::get('/role/list', [RoleController::class, 'index']);
+
     Route::get('/user', [UserController::class, 'create']);
     Route::get('/show', [UserController::class, 'index']);
       Route::resource('users', UserController::class);

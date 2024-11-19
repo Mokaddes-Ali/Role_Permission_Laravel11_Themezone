@@ -19,12 +19,14 @@ class UserSeeder extends Seeder
         $superAdminRole->givePermissionTo(Permission::all());
 
         $adminRole = Role::create(['name' => 'admin']);
-        $adminRole->givePermissionTo([
-            'product-list',
-            'product-create',
-            'product-edit',
-            'product-delete'
-        ]);
+        $adminRole->givePermissionTo(
+            Permission::all()
+
+            // 'product-list',
+            // 'product-create',
+            // 'product-edit',
+            // 'product-delete'
+        );
         $staffRole = Role::create(['name' => 'staff']);
 
         $staffRole->givePermissionTo([

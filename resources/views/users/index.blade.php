@@ -51,7 +51,7 @@
                   @csrf
                   @method('DELETE')
                   @can('role-edit')
-                  <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i> Delete</button>
+                  <button type="submit"  onclick="return confirm('Are you sure you want to')" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i> Delete</button>
                   @endcan
               </form>
         </td>

@@ -88,7 +88,10 @@
             @can('role-edit')
             <li><a href="{{ url('/user') }}">Add New User</a></li>
             @endcan
-            <li><a href="#">User Roles</a></li>
+            @can('role-edit')
+            <li><a href="{{ url('/role') }}">Add New Roles</a></li>
+            @endcan
+            <li><a href={{ route('roles.index') }}>Roles List</a></li>
         </ul>
     </li>
     <li>
